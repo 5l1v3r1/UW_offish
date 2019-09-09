@@ -1,0 +1,29 @@
+UW_offish
+---------
+
+Offline passwords collector POC for testing purposes
+Coded by khorben <khorben@uberwall.org>
+UberWall security team \../. .\../
+
+
+UW_offish is a single-threaded clear text protocol simulator. It listens on a
+number of ports, and sends lines of data as it receives others, according to a
+simple configuration file.
+
+It may be useful on a fake open wireless access point. Combined with a protocol
+analyzer, redirecting all traffic to this program could attract passwords from
+unaware users, looking for an actual internet access in the wild. Another
+possible use would involve honeypots, as it could attract attacks while avoiding
+actual exploitation (hopefully).
+
+
+The current state is:
+- listening: OK
+- configuration file loading: OK
+- read/write: OK
+- transparent proxies support: NO
+
+
+The planned or possible features are:
+- protocol definition framework (with password detection)
+- fuzzing
